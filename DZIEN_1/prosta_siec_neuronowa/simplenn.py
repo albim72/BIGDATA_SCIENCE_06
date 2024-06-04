@@ -10,21 +10,21 @@ class SimpleNeuralNetwork:
 
     def __repr__(self):
         return f'to jest nowa sieć neuronowa z wagami:\n {self.weights}'
-    
+
     def sigmoid(self,x):
         return 1/(1+np.exp(-x))
-    
+
     def d_sigmoid(self,x):
         return x*(1-x)
-    
+
     def propagation(self,inputs):
         return self.sigmoid(np.dot(inputs.astype(float),self.weights))
-    
+
     def backwardpropagation(self,propagation_result,train_input,train_output):
         error = train_output - propagation_result
         self.weights += np.dot(train_input.T,error*self.d_sigmoid(propagation_result))
-        
+
     def train(self,train_input,train_output,train_iters):
         for _ in range(train_iters):
             propagation_result = self.propagation(train_input)
-            self.backwardpropagation(propagation_result,train_output)
+            self.backwardpropagation(propagation_result,train_input,train_output)
