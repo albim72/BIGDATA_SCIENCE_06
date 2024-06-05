@@ -1,0 +1,14 @@
+testy = [
+    "The movie was great!",
+    "The movie was okay.",
+    "The movie was terrible.",
+    "Very bad movie!",
+    "Big Shit!",
+    "Disaster.",
+    "Beautiful disaster",
+    "Głupi film.",
+    "The movie was bad bad bad bad bad bad",
+    "The movie was okay okay okay okay okay okay okay okay.",
+    "Great Great Great Great Great Great Great",
+    "The movie was good with good acting but a good screenplay."
+]
